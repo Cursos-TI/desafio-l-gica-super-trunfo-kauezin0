@@ -110,53 +110,17 @@ int main(){
 
     printf("\nResultado\n\n");
 
-if (populacao>populacao2)
+if (populacao>populacao2 || area>area2 || pib>pib2 || qnt_ponto_turistico>qnt_ponto_turistico2 || (!(densidade_pop>densidade_pop2)) || pib_per_cap>pib_per_cap2 || super>super2)
 {
     printf("Populacao: Carta 1 venceu!\n");
-} else{
+} 
+else if (populacao == populacao2 || area == area2 || pib == pib2 || qnt_ponto_turistico == qnt_ponto_turistico2 || densidade_pop == densidade_pop2 || pib_per_cap == pib_per_cap2 || super == super2)
+{    
+    printf("Empatou!");
+} 
+else
+{
     printf("Populacao: Carta 2 venceu!\n");
-}
-
-if (area>area2)
-{
-    printf("Area: Carta 1 venceu!\n");
-} else{
-    printf("Area: Carta 2 venceu!\n");
-}
-
-if (pib>pib2)
-{
-    printf("PIB: Carta 1 venceu!\n");
-} else{
-    printf("PIB: Carta 2 venceu!\n");
-}
-
-if (qnt_ponto_turistico>qnt_ponto_turistico2)
-{
-    printf("Ponto turistico: Carta 1 venceu!\n");
-} else{
-    printf("Ponto turistico: Carta 2 venceu!\n");
-}
-
-if (!(densidade_pop>densidade_pop2))
-{
-    printf("Densidade populacional: Carta 1 venceu!\n");
-} else{
-    printf("Densidade populacional: Carta 2 venceu!\n");
-}
-
-if (pib_per_cap>pib_per_cap2)
-{
-    printf("PIB per capita: Carta 1 venceu!\n");
-} else{
-    printf("PIB per capita: Carta 2 venceu!\n");
-}
-
-if (super>super2)
-{
-    printf("Super: Carta 1 venceu!\n");
-} else{
-    printf("Super: Carta 2 venceu!\n");
 }
     return 0;
 }
