@@ -118,19 +118,79 @@ int main(){
     switch (comparativo)
     {
     case 1:
+        if (populacao>populacao2)
+        {
+            printf("Carta 1 venceu!");
+        }
+        else if (populacao<populacao2)
+        {
+            printf("Carta 2 venceu!");
+        }
+        else
+        {
+            printf("Deu empate");
+        }
         
         break;
     case 2:
-        
+
+    if (area>area2)
+    {
+        printf("Carta 1 venceu!");
+    }
+    else if (area<area2)
+    {
+        printf("Carta 2 venceu!");
+    }
+    else
+    {
+        printf("Deu empate");
+    }
         break;
     case 3:
         
+    if (pib>pib2)
+        {
+            printf("Carta 1 venceu!");
+        }
+        else if (pib<pib2)
+        {
+            printf("Carta 2 venceu!");
+        }
+        else
+        {
+            printf("Deu empate");
+        }
         break;
     case 4:
         
+    if (qnt_ponto_turistico>qnt_ponto_turistico2)
+        {
+            printf("Carta 1 venceu!");
+        }
+        else if (qnt_ponto_turistico<qnt_ponto_turistico2)
+        {
+            printf("Carta 2 venceu!");
+        }
+        else
+        {
+            printf("Deu empate");
+        }
         break;
     case 5:
         
+    if (!(densidade_pop>densidade_pop2))
+        {
+            printf("Carta 1 venceu!");
+        }
+        else if (!(densidade_pop<densidade_pop2)) 
+        {
+            printf("Carta 2 venceu!");
+        }
+        else
+        {
+            printf("Deu empate");
+        }
         break;
     default:
 
@@ -140,7 +200,7 @@ int main(){
 //Resultado da comparação das cartas
 //Densidade populacional com o operador NOT
 
-    printf("\nResultado\n\n");
+/*    printf("\nResultado\n\n");
 
 if (populacao>populacao2 || area>area2 || pib>pib2 || qnt_ponto_turistico>qnt_ponto_turistico2 || (!(densidade_pop>densidade_pop2)) || pib_per_cap>pib_per_cap2 || super>super2)
 {
@@ -155,4 +215,4 @@ else
     printf("Populacao: Carta 2 venceu!\n");
 }
     return 0;
-}
+}*/
