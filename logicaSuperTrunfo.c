@@ -104,15 +104,15 @@ int main(){
     
     printf(" Estado: %c\n Codigo da carta: %s\n Nome da cidade: %s\n Populacao: %ld\n Area: %.2fkm\n PIB: %.2f\n Numeros de pontos turisticos: %d\n Densidade Populacional: %.2f\n PIB Per Capita: %.2f\n Super Poder: %.3f\n---------------------", estado2, codigo_da_carta2, nome_da_cidade2, populacao2, area2, pib2, qnt_ponto_turistico2, densidade_pop2, pib_per_cap2, super2);
 
-// Menu interativo para as escolhas dos atributos
+// Menu interativo para as escolhas dos atributos e resultados
 
-    printf("Escolha o atributo das suas cartas\n");
+    printf("\n\n***Escolha o atributo das suas cartas***\n\n");
     printf("1. Populacao\n");
     printf("2. Area\n");
     printf("3. PIB\n");
     printf("4. Numeros de pontos turisticos\n");
     printf("5. densidade demografica\n");
-    printf("Escolha: \n");
+    printf("\nEscolha: \n");
     scanf("%d", &comparativo);
 
     switch (comparativo)
@@ -120,6 +120,7 @@ int main(){
     case 1:
         if (populacao>populacao2)
         {
+            printf("%s", nome_da_cidade, nome_da_cidade2);
             printf("Carta 1 venceu!");
         }
         else if (populacao<populacao2)
@@ -192,27 +193,11 @@ int main(){
             printf("Deu empate");
         }
         break;
+
     default:
 
+        printf("Valor invalido");
         break;
     }
-
-//Resultado da comparação das cartas
-//Densidade populacional com o operador NOT
-
-/*    printf("\nResultado\n\n");
-
-if (populacao>populacao2 || area>area2 || pib>pib2 || qnt_ponto_turistico>qnt_ponto_turistico2 || (!(densidade_pop>densidade_pop2)) || pib_per_cap>pib_per_cap2 || super>super2)
-{
-    printf("Populacao: Carta 1 venceu!\n");
-} 
-else if (populacao == populacao2 || area == area2 || pib == pib2 || qnt_ponto_turistico == qnt_ponto_turistico2 || densidade_pop == densidade_pop2 || pib_per_cap == pib_per_cap2 || super == super2)
-{    
-    printf("Empatou!");
-} 
-else
-{
-    printf("Populacao: Carta 2 venceu!\n");
-}
     return 0;
-}*/
+}
