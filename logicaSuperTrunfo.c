@@ -21,7 +21,7 @@ int main(){
     scanf(" %c", &estado);
 
     printf("Codigo da carta:\n");
-    scanf(" %s", &codigo_da_carta);
+    scanf(" %s", codigo_da_carta);
 
     printf("Nome da cidade:\n");
     while (getchar() != '\n'); // Limpa o buffer
