@@ -112,8 +112,8 @@ int main(){
 
 
  int resultado1, resultado2, comparativo1, comparativo2;
-
-    printf("\n\n***Escolha o atributo das cartas***\n\n");
+    
+    printf("\n\n***Agora escolha o atributo das cartas***\n\n");
     printf("\n\nEscolha o primeiro atributo\n\n");
     printf("1. Populacao\n");
     printf("2. Area\n");
@@ -126,34 +126,31 @@ int main(){
     switch (comparativo1)
     {
     case 1:
-        printf("\n**Cidades**\n\n Carta 1: %s\n Carta 2: %s\n\n", nome_da_cidade, nome_da_cidade2);
-        printf("**Populacao**\n\n Carta 1: %ld\n Carta 2: %ld\n\n",populacao, populacao2);
+        
+        printf("\n**Populacao**\n\n Carta 1(%s): %ld\n Carta 2(%s): %ld\n\n",nome_da_cidade, populacao, nome_da_cidade2, populacao2);
         resultado1 = populacao > populacao2 ? 1 : 0;
         
         break;
     case 2:
-        printf("\n**Cidades**\n\n Carta 1: %s\n Carta 2: %s\n\n", nome_da_cidade, nome_da_cidade2);
-        printf("**Area**\n\n Carta 1: %.2f\n Carta 2: %.2f\n\n",area, area2);
+        
+        printf("**Area**\n\n Carta 1(%s): %.2f\n Carta 2(%s): %.2f\n\n",nome_da_cidade, area, nome_da_cidade2, area2);
         resultado1 = area > area2 ? 1 : 0;
     
         break;
     case 3:
-        printf("\n**Cidades**\n\n Carta 1: %s\n Carta 2: %s\n\n", nome_da_cidade, nome_da_cidade2);
-        printf("**PIB**\n\n Carta 1: %.2f\n Carta 2: %.2f\n\n",pib, pib2);
+        printf("**PIB**\n\n Carta 1(%s): %.2f\n Carta 2(%s): %.2f\n\n",nome_da_cidade, pib, nome_da_cidade2, pib2);
         resultado1 = pib > pib2 ? 1 : 0;
 
     
         break;
     case 4:
-        printf("\n**Cidades**\n\n Carta 1: %s\n Carta 2: %s\n\n", nome_da_cidade, nome_da_cidade2);
-        printf("**Pontos Turisticos**\n\n Carta 1: %d\n Carta 2: %d\n\n",qnt_ponto_turistico, qnt_ponto_turistico2);
+        printf("**Pontos Turisticos**\n\n Carta 1(%s): %d\n Carta 2(%s): %d\n\n",nome_da_cidade, qnt_ponto_turistico, nome_da_cidade2, qnt_ponto_turistico2);
         resultado1 = qnt_ponto_turistico > qnt_ponto_turistico2 ? 1 : 0;
 
     
         break;
     case 5:
-        printf("\n**Cidades**\n\n Carta 1: %s\n Carta 2: %s\n\n", nome_da_cidade, nome_da_cidade2);
-        printf("**Densidade Demografica**\n\n Carta 1: %.2f\n Carta 2: %.2f\n\n",densidade_pop, densidade_pop2);
+        printf("**Densidade Demografica**\n\n Carta 1(%s): %.2f\n Carta 2(%s): %.2f\n\n",nome_da_cidade, densidade_pop, nome_da_cidade2, densidade_pop2);
         resultado1 = densidade_pop < densidade_pop2 ? 1 : 0;
      
         break;
@@ -168,13 +165,7 @@ int main(){
 
 // Atributo 2
 
-
-    if (comparativo1 == comparativo2)
-    {
-        printf("Voce colocou o mesmo atributo");
-    }
-    else
-    {
+    
     printf("\n\nEscolha o segundo atributo\n\n");
     printf("1. Populacao\n");
     printf("2. Area\n");
@@ -184,37 +175,37 @@ int main(){
     printf("\nEscolha: \n");
     scanf("%d", &comparativo2);
 
-    switch (comparativo2)
+    if (comparativo1 == comparativo2)
     {
+        printf("Voce colocou o mesmo atributo\n");
+        return 1;
+    }
+
+     switch (comparativo2){
     case 1:
-        printf("\n**Cidades**\n\n Carta 1: %s\n Carta 2: %s\n\n", nome_da_cidade, nome_da_cidade2);
-        printf("**Populacao**\n\n Carta 1: %ld\n Carta 2: %ld\n\n",populacao, populacao2);
+        printf("**Populacao**\n\n Carta 1(%s): %ld\n Carta 2(%s): %ld\n\n",nome_da_cidade, populacao, nome_da_cidade2, populacao2);
         resultado2 = populacao > populacao2 ? 1 : 0;
         
         break;
     case 2:
-        printf("\n**Cidades**\n\n Carta 1: %s\n Carta 2: %s\n\n", nome_da_cidade, nome_da_cidade2);
-        printf("**Area**\n\n Carta 1: %.2f\n Carta 2: %.2f\n\n",area, area2);
+        printf("\n**Area**\n\n Carta 1(%s): %.2f\n Carta 2(%s): %.2f\n\n",nome_da_cidade, area, nome_da_cidade2, area2);
         resultado2 = area > area2 ? 1 : 0;
     
         break;
     case 3:
-        printf("\n**Cidades**\n\n Carta 1: %s\n Carta 2: %s\n\n", nome_da_cidade, nome_da_cidade2);
-        printf("**PIB**\n\n Carta 1: %.2f\n Carta 2: %.2f\n\n",pib, pib2);
+        printf("**PIB**\n\n Carta 1(%s): %.2f\n Carta 2(%s): %.2f\n\n",nome_da_cidade, pib, nome_da_cidade2, pib2);
         resultado2 = pib > pib2 ? 1 : 0;
 
     
         break;
     case 4:
-        printf("\n**Cidades**\n\n Carta 1: %s\n Carta 2: %s\n\n", nome_da_cidade, nome_da_cidade2);
-        printf("**Pontos Turisticos**\n\n Carta 1: %d\n Carta 2: %d\n\n",qnt_ponto_turistico, qnt_ponto_turistico2);
+        printf("**Pontos Turisticos**\n\n Carta 1(%s): %d\n Carta 2(%s): %d\n\n",nome_da_cidade, qnt_ponto_turistico, nome_da_cidade2, qnt_ponto_turistico2);
         resultado2 = qnt_ponto_turistico > qnt_ponto_turistico2 ? 1 : 0;
 
     
         break;
     case 5:
-        printf("\n**Cidades**\n\n Carta 1: %s\n Carta 2: %s\n\n", nome_da_cidade, nome_da_cidade2);
-        printf("**Densidade Demografica**\n\n Carta 1: %.2f\n Carta 2: %.2f\n\n",densidade_pop, densidade_pop2);
+        printf("**Densidade Demografica**\n\n Carta 1(%s): %.2f\n Carta 2(%s): %.2f\n\n",nome_da_cidade, densidade_pop, nome_da_cidade2, densidade_pop2);
         resultado2 = densidade_pop < densidade_pop2 ? 1 : 0;
      
         break;
@@ -223,21 +214,32 @@ int main(){
 
         printf("Valor invalido");
         break;
-    }
     
+    }
+
     
-    if (resultado1 && resultado2)
-    {
-        printf("Carta 1 venceu!");
-    }
-    else if (resultado1 != resultado2)
-    {
-        printf("Empatou!");
-    }
-    else
-    {
-        printf("Carta 2 venceu!");
-    }
+int pontos_carta1 = 0, pontos_carta2 = 0;
+
+// Verifica quem venceu o primeiro atributo
+if (resultado1 == 1) 
+    pontos_carta1++;
+else if (resultado1 == 0) 
+    pontos_carta2++;
+
+// Verifica quem venceu o segundo atributo
+if (resultado2 == 1) 
+    pontos_carta1++;
+else if (resultado2 == 0) 
+    pontos_carta2++;
+
+// Define o resultado final com base na pontuação
+if (pontos_carta1 > pontos_carta2) {
+    printf("Carta 1 venceu!\n");
+} else if (pontos_carta2 > pontos_carta1) {
+    printf("Carta 2 venceu!\n");
+} else {
+    printf("Empate!\n");
+}
     
     
     return 0;
