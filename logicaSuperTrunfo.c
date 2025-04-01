@@ -24,6 +24,7 @@ int main(){
     scanf(" %s", &codigo_da_carta);
 
     printf("Nome da cidade:\n");
+    while (getchar() != '\n'); // Limpa o buffer
     scanf(" %[^\n]", &nome_da_cidade);
 
     printf("Populacao:\n");
@@ -110,7 +111,7 @@ int main(){
 // Atributo 1
 
 
-int resultado1, resultado2, comparativo1, comparativo2;
+ int resultado1, resultado2, comparativo1, comparativo2;
 
     printf("\n\n***Escolha o atributo das cartas***\n\n");
     printf("\n\nEscolha o primeiro atributo\n\n");
