@@ -104,9 +104,13 @@ int main(){
     
     printf(" Estado: %c\n Codigo da carta: %s\n Nome da cidade: %s\n Populacao: %ld\n Area: %.2fkm\n PIB: %.2f\n Numeros de pontos turisticos: %d\n Densidade Populacional: %.2f\n PIB Per Capita: %.2f\n Super Poder: %.3f\n---------------------", estado2, codigo_da_carta2, nome_da_cidade2, populacao2, area2, pib2, qnt_ponto_turistico2, densidade_pop2, pib_per_cap2, super2);
 
+
+
 // Menu interativo para as escolhas dos atributos e resultados
-    
-    int resultado1, resultado2, comparativo1, comparativo2;
+// Atributo 1
+
+
+int resultado1, resultado2, comparativo1, comparativo2;
 
     printf("\n\n***Escolha o atributo das cartas***\n\n");
     printf("\n\nEscolha o primeiro atributo\n\n");
@@ -158,6 +162,10 @@ int main(){
         printf("Valor invalido");
         break;
     }
+
+
+
+// Atributo 2
 
 
     if (comparativo1 == comparativo2)
@@ -217,14 +225,19 @@ int main(){
     }
     
     
-    if (resultado1 == 1)
+    if (resultado1 && resultado2)
     {
         printf("Carta 1 venceu!");
     }
-    else if resultado1
+    else if (resultado1 != resultado2)
     {
-        printf
+        printf("Empatou!");
     }
+    else
+    {
+        printf("Carta 2 venceu!");
+    }
+    
     
     return 0;
 }
