@@ -68,7 +68,7 @@ int main(){
     scanf(" %c", &estado2);
 
     printf("Codigo da carta:\n");
-    scanf(" %s", &codigo_da_carta2);
+    scanf(" %s", codigo_da_carta2);
 
     printf("Nome da cidade:\n");
     scanf(" %[^\n]", &nome_da_cidade2);
@@ -217,20 +217,57 @@ int main(){
     
     }
 
-    
+
+
+//Pontos da carta para solucionar o problema do empate
+
+
 int pontos_carta1 = 0, pontos_carta2 = 0;
 
+
+
 // Verifica quem venceu o primeiro atributo
+
+
 if (resultado1 == 1) 
     pontos_carta1++;
 else if (resultado1 == 0) 
     pontos_carta2++;
 
+
 // Verifica quem venceu o segundo atributo
-if (resultado2 == 1) 
+
+
+    if (resultado2 == 1) 
     pontos_carta1++;
 else if (resultado2 == 0) 
     pontos_carta2++;
+
+
+ // Verifica se houve empate nos dois atributos
+int empate = 0;
+
+if ((comparativo1 == 1 && populacao == populacao2) ||
+    (comparativo1 == 2 && area == area2) ||
+    (comparativo1 == 3 && pib == pib2) ||
+    (comparativo1 == 4 && qnt_ponto_turistico == qnt_ponto_turistico2) ||
+    (comparativo1 == 5 && densidade_pop == densidade_pop2)) {
+
+    if ((comparativo2 == 1 && populacao == populacao2) ||
+        (comparativo2 == 2 && area == area2) ||
+        (comparativo2 == 3 && pib == pib2) ||
+        (comparativo2 == 4 && qnt_ponto_turistico == qnt_ponto_turistico2) ||
+        (comparativo2 == 5 && densidade_pop == densidade_pop2)) {
+        
+        empate = 1; // Marca que houve empate
+    }
+}
+
+// Se houve empate, imprime e encerra o jogo
+if (empate) {
+    printf("Empate!\n");
+    return 0;
+}
 
 // Define o resultado final com base na pontuação
 if (pontos_carta1 > pontos_carta2) {
@@ -240,7 +277,6 @@ if (pontos_carta1 > pontos_carta2) {
 } else {
     printf("Empate!\n");
 }
-    
     
     return 0;
 }
