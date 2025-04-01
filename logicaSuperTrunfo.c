@@ -25,7 +25,7 @@ int main(){
 
     printf("Nome da cidade:\n");
     while (getchar() != '\n'); // Limpa o buffer
-    scanf(" %19[^\n]", nome_da_cidade2);
+    scanf(" %19[^\n]", nome_da_cidade);
 
     printf("Populacao:\n");
     scanf(" %ld", &populacao);
